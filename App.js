@@ -1,12 +1,13 @@
-import { StatusBar } from 'expo-status-bar';
 import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import { StyleSheet, Text, View, NativeModules, Button } from 'react-native';
 
 export default function App() {
+  const { ExampleModule } = NativeModules;
+
   return (
     <View style={styles.container}>
       <Text>Open up App.js to start working on your app!</Text>
-      <StatusBar style="auto" />
+      <Button title='Click me for printMessage' onPress={() => ExampleModule.printMessage()} />
     </View>
   );
 }
