@@ -6,12 +6,18 @@
 //
 
 import Foundation
+import React
 
 @objc(RCTExampleModule)
-class RCTExampleModule: NSObject {
+class RCTExampleModule: RCTEventEmitter {
 
   @objc
-  func printMessage(_ title: String) {
+  func printMessage( _ title: String) {
     print("Native message with React Native \(title)")
+  }
+  
+  @objc
+  func returnMessage( _ title: String, resolver resolve: @escaping RCTPromiseResolveBlock, rejecter reject: @escaping RCTPromiseRejectBlock) {
+    resolve("Message processed: \(title)")
   }
 }
