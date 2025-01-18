@@ -9,6 +9,6 @@
 
 @interface RCT_EXTERN_MODULE(RCTExampleModule, NSObject)
 
-  RCT_EXTERN_METHOD(printMessage);
+  RCT_EXTERN_METHOD(printMessage:(NSString *) title);
 
 @end

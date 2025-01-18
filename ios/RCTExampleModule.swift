@@ -11,7 +11,7 @@ import Foundation
 class RCTExampleModule: NSObject {
 
   @objc
-  func printMessage() {
-    print("Native message with React Native")
+  func printMessage(_ title: String) {
+    print("Native message with React Native \(title)")
   }
 }
